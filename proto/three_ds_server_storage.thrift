@@ -12,7 +12,7 @@ struct CardRange {
 }
 
 /** Вспомогательная информация по транзакции */
-struct RReqTransactionInfo {
+struct ChallengeFlowInfo {
     1: required ThreeDsServerTransactionID transaction_id
     2: required string                     device_channel
     3: required Timestamp                  decoupled_auth_max_time
@@ -47,11 +47,11 @@ service CardRangesStorage {
     GetCardRangesResponse GetCardRanges(1: GetCardRangesRequest request)
 }
 
-service RReqTransactionInfoStorage {
+service ChallengeFlowInfoStorage {
 
     /** Запрос на сохранение информации по транзакции */
-    void SaveRReqTransactionInfo(1: RReqTransactionInfo transaction_info)
+    void SaveChallengeFlowInfo(1: ChallengeFlowInfo transaction_info)
 
     /** Запрос на получение информации по транзакции */
-    RReqTransactionInfo GetRReqTransactionInfo(1: ThreeDsServerTransactionID transaction_id)
+    ChallengeFlowInfo GetChallengeFlowInfo(1: ThreeDsServerTransactionID transaction_id)
 }
