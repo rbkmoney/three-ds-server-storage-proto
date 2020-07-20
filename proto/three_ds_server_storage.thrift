@@ -5,7 +5,7 @@ typedef string ThreeDsServerTransactionID
 typedef string DirectoryServerProviderID
 typedef string Timestamp
 
-exception GetCardRangesNotFound {
+exception CardRangesNotFound {
     1: string info
 }
 
@@ -52,7 +52,7 @@ service CardRangesStorage {
     void InitRBKMoneyPreparationFlow(1: InitRBKMoneyPreparationFlowRequest request)
 
     /** Запрос на получение всех карточных диапазонов */
-    GetCardRangesResponse GetCardRanges(1: GetCardRangesRequest request) throws (1: GetCardRangesNotFound ex1)
+    GetCardRangesResponse GetCardRanges(1: GetCardRangesRequest request) throws (1: CardRangesNotFound ex1)
 
 }
 
