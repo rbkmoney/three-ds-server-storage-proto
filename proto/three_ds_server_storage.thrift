@@ -62,7 +62,7 @@ service CardRangesStorage {
 
     bool IsValidCardRanges(1: DirectoryServerProviderID provider_id, 2: list<CardRange> card_ranges)
 
-    bool IsAnyAccountNumberMatch(1: DirectoryServerProviderID provider_id, 2: i64 account_number)
+    bool isInCardRange(1: DirectoryServerProviderID provider_id, 2: i64 account_number)
 
 }
 
