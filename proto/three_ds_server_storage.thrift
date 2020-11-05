@@ -58,11 +58,11 @@ service PreparationFlowInitializer {
 
 service CardRangesStorage {
 
-    bool StorageIsEmpty(1: DirectoryServerProviderID provider_id)
+    bool IsStorageEmpty(1: DirectoryServerProviderID provider_id)
 
     bool IsValidCardRanges(1: DirectoryServerProviderID provider_id, 2: list<CardRange> card_ranges)
 
-    bool AnyMatchAcctNumber(1: DirectoryServerProviderID provider_id, 2: i64 acct_number)
+    bool IsAnyAccountNumberMatch(1: DirectoryServerProviderID provider_id, 2: i64 account_number)
 
 }
 
