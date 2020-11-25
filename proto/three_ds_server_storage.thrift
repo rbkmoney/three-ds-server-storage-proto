@@ -32,7 +32,7 @@ struct InitRBKMoneyPreparationFlowRequest {
     2: required MessageVersion            message_version
 }
 
-struct UpdateRBKMoneyPreparationFlowRequest {
+struct UpdateCardRangesRequest {
     1: required DirectoryServerProviderID   provider_id
     2: required MessageVersion              message_version
     3: required list<CardRange>             card_ranges
@@ -61,7 +61,7 @@ service PreparationFlowInitializer {
 
 service CardRangesStorage {
 
-    void updateCardRanges(1: UpdateRBKMoneyPreparationFlowRequest update_request)
+    void updateCardRanges(1: UpdateCardRangesRequest request)
 
     bool IsStorageEmpty(1: DirectoryServerProviderID provider_id)
 
