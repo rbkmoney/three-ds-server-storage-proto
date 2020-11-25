@@ -61,7 +61,7 @@ service PreparationFlowInitializer {
 
 service CardRangesStorage {
 
-    void updateCardRanges(1: UpdateCardRangesRequest request)
+    void updateCardRanges(1: UpdateCardRangesRequest request, 2: bool is_need_storage_clear)
 
     bool IsStorageEmpty(1: DirectoryServerProviderID provider_id)
 
