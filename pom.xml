@@ -26,15 +26,9 @@
     <dependencies>
         <!--rbkmoney-->
         <dependency>
-            <groupId>com.rbkmoney.woody</groupId>
-            <artifactId>woody-thrift</artifactId>
-            <version>LATEST</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>com.rbkmoney</groupId>
             <artifactId>damsel</artifactId>
-            <version>1.323-ae26a6c</version>
+            <version>1.465-48db76e</version>
         </dependency>
     </dependencies>
 
